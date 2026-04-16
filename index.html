@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ClippaPay - Affordable UGC Ads. Get PRO creators and guaranteed views.">
     <title>ClippaPay - Affordable UGC Ads</title>
-    
+
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
     <style>
         :root {
             --primary-red: #EF1C25;
@@ -28,16 +32,18 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             padding-top: 80px;
             color: #333;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
             -webkit-font-smoothing: antialiased;
         }
 
-        img, video {
+        img,
+        video {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .container-wrapper {
             max-width: 1100px;
             margin: 0 auto;
@@ -59,39 +65,130 @@
             width: 100%;
             box-sizing: border-box;
             position: fixed;
-            top: 0; left: 0; z-index: 1000;
+            top: 0;
+            left: 0;
+            z-index: 1000;
             transition: transform 0.3s ease-in-out;
-            will-change: transform; /* Performance hint */
+            will-change: transform;
+            /* Performance hint */
         }
-        .promo-banner.hidden { transform: translateY(-100%); }
-        .promo-text { font-size: 22px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
-        
-        .header-countdown { display: flex; gap: 20px; }
-        .h-time-block { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-        .h-number { color: var(--vibrant-yellow); font-size: 28px; font-weight: 800; margin-bottom: 2px; }
-        .h-label { font-size: 12px; font-weight: 400; }
+
+        .promo-banner.hidden {
+            transform: translateY(-100%);
+        }
+
+        .promo-text {
+            font-size: 22px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-countdown {
+            display: flex;
+            gap: 20px;
+        }
+
+        .h-time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .h-number {
+            color: var(--vibrant-yellow);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .h-label {
+            font-size: 12px;
+            font-weight: 400;
+        }
 
         /* --- Hero Section --- */
-        .hero-section { margin-top: 40px; margin-bottom: 30px; }
-        .brand-logos { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 30px; font-size: 20px; font-weight: 700; }
-        .logo-text-wc { color: #000; display: flex; align-items: center; gap: 8px; }
-        .logo-text-wc img { height: 40px; width: auto; } 
+        .hero-section {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
 
-        .location-tag { color: #666; font-style: italic; margin-bottom: 25px; color: #000; }
-        .badges-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
-        .badge { border: 1px solid #e0e0e0; border-radius: 50px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #555; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        
-        .hero-headline { font-size: 42px; line-height: 1.2; color: #EF1C25; font-weight: 800; margin-bottom: 20px; }
-        
+        .brand-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .logo-text-wc {
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-text-wc img {
+            height: 40px;
+            width: auto;
+        }
+
+        .location-tag {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-headline {
+            font-size: 42px;
+            line-height: 1.2;
+            color: #EF1C25;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
         /* Optimized stroke text class */
         .hero-subtext-styled {
-            color:#000; 
-            font-weight:900;
-            -webkit-text-stroke: 0.25px rgba(0,0,0,0.9);
-            text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+            color: #000;
+            font-weight: 900;
+            -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.9);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
             opacity: 1;
         }
-        .hero-subtext { font-size: 18px; line-height: 1.6; color: #666; max-width: 800px; margin: 0 auto; }
+
+        .hero-subtext {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         /* --- Video Section --- */
         .video-section-bg {
@@ -106,11 +203,12 @@
             width: 100%;
             margin: 0 auto 50px auto;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             padding: 8px;
             background: linear-gradient(135deg, #EF1C25, #0668E1, #fff200);
             box-sizing: border-box;
         }
+
         .video-mockup-image {
             width: 100%;
             display: block;
@@ -118,6 +216,7 @@
             border-radius: 14px;
             background-color: #000;
         }
+
         .video-side-arrow {
             position: absolute;
             right: -50px;
@@ -126,66 +225,155 @@
             font-size: 40px;
             color: var(--primary-red);
             animation: bounce-side 2s infinite;
-            display: none; 
+            display: none;
         }
+
         @media (min-width: 1200px) {
-            .video-side-arrow { display: block; }
+            .video-side-arrow {
+                display: block;
+            }
         }
-        
+
         @keyframes bounce-side {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(-50%) translateX(0);}
-            40% {transform: translateY(-50%) translateX(-10px);}
-            60% {transform: translateY(-50%) translateX(-5px);}
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(-50%) translateX(0);
+            }
+
+            40% {
+                transform: translateY(-50%) translateX(-10px);
+            }
+
+            60% {
+                transform: translateY(-50%) translateX(-5px);
+            }
         }
 
         /* --- Comparisons & Features --- */
         .replaces-banner {
-            display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; color: #666; font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            color: #666;
+            font-weight: 600;
         }
-        .replaces-logos { display: flex; gap: 15px; align-items: center; opacity: 0.7; flex-wrap: wrap; justify-content: center; }
-        .comp-logo { font-weight: 700; font-size: 18px; color: #555; display: flex; align-items: center; gap: 5px; }
+
+        .replaces-logos {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            opacity: 0.7;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .comp-logo {
+            font-weight: 700;
+            font-size: 18px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
         .pink-btn {
-            background: #d91a9c; color: white;
-            padding: 10px 25px; border-radius: 30px;
-            font-weight: 700; display: inline-flex; align-items: center; gap: 10px;
+            background: #d91a9c;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             margin-bottom: 30px;
             text-align: center;
         }
-        .feature-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 15px 30px;
-            text-align: left; max-width: 800px; margin: 0 auto 40px auto;
-        }
-        .feature-item { display: flex; align-items: center; gap: 10px; color: #444; }
-        .feature-item i { color: var(--primary-blue); min-width: 20px; }
 
-        .offer-expiry-text { font-weight: 700; color: var(--dark-purple); margin-bottom: 10px; }
-        .offer-date { color: var(--primary-red); }
-        
-        /* --- Body Countdown --- */
-        .body-countdown { display: flex; justify-content: center; gap: 10px; margin: 25px auto; flex-wrap: wrap; }
-        .b-time-block {
-            background-color: var(--primary-red); color: white;
-            width: 70px; height: 70px; border-radius: 8px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
         }
-        .b-number { font-size: 30px; font-weight: 800; line-height: 1; }
-        .b-label { font-size: 11px; text-transform: uppercase; font-weight: 600; }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #444;
+        }
+
+        .feature-item i {
+            color: var(--primary-blue);
+            min-width: 20px;
+        }
+
+        .offer-expiry-text {
+            font-weight: 700;
+            color: var(--dark-purple);
+            margin-bottom: 10px;
+        }
+
+        .offer-date {
+            color: var(--primary-red);
+        }
+
+        /* --- Body Countdown --- */
+        .body-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 25px auto;
+            flex-wrap: wrap;
+        }
+
+        .b-time-block {
+            background-color: var(--primary-red);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .b-number {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .b-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
 
         /* --- Buttons --- */
         .big-red-cta {
-            background-color: var(--primary-red); 
+            background-color: var(--primary-red);
             color: white;
-            font-size: 24px; 
-            font-weight: 800; 
+            font-size: 24px;
+            font-weight: 800;
             padding: 20px 60px;
-            border-radius: 10px; 
-            border: none; 
+            border-radius: 10px;
+            border: none;
             cursor: pointer;
-            display: inline-flex; 
-            align-items: center; 
+            display: inline-flex;
+            align-items: center;
             gap: 15px;
-            box-shadow: 0 10px 25px rgba(239, 28, 37, 0.4); 
+            box-shadow: 0 10px 25px rgba(239, 28, 37, 0.4);
             margin-bottom: 30px;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -194,43 +382,75 @@
             box-sizing: border-box;
             justify-content: center;
         }
-        .big-red-cta:hover { 
-            transform: translateY(-5px); 
+
+        .big-red-cta:hover {
+            transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(239, 28, 37, 0.6);
             filter: brightness(1.1);
         }
-        
+
         @keyframes pulse-red {
-            0% { box-shadow: 0 0 0 0 rgba(239, 28, 37, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(239, 28, 37, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 28, 37, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 28, 37, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(239, 28, 37, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 28, 37, 0);
+            }
         }
 
-        .footer-trust-badges { display: flex; justify-content: center; gap: 30px; color: #666; font-size: 14px; flex-wrap: wrap; }
-        .trust-item { display: flex; align-items: center; gap: 8px; }
+        .footer-trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: #666;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
         /* --- Image Grid (Feature Showcase) --- */
         .feature-showcase-section {
             padding: 80px 0;
             background-color: #fff;
         }
+
         .showcase-title {
             color: var(--dark-purple);
             font-size: 32px;
             font-weight: 800;
             margin-bottom: 40px;
         }
+
         .card-img-holder {
-            width: 100%; border-radius: 12px; overflow: hidden; margin-top: auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); background: #fff;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: #fff;
         }
-        .card-img-holder img { width: 100%; height: auto; display: block; }
-        
+
+        .card-img-holder img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Grid Fix: Moved from inline style */
-        .bottom-row-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 25px; 
+        .bottom-row-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
         }
 
         /* --- Steps Section --- */
@@ -238,6 +458,7 @@
             padding: 80px 0;
             background-color: #f8fbff;
         }
+
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -246,17 +467,19 @@
             max-width: 900px;
             margin: 0 auto;
         }
+
         .step-card {
             background: #fff;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid #eee;
             position: relative;
             display: flex;
             gap: 20px;
             align-items: flex-start;
         }
+
         .step-num-badge {
             background-color: var(--primary-blue);
             color: white;
@@ -271,16 +494,51 @@
             flex-shrink: 0;
             margin-top: 2px;
         }
-        .step-card:nth-child(5n+1) .step-num-badge { background-color: #0668E1; }
-        .step-card:nth-child(5n+2) .step-num-badge { background-color: #EF1C25; }
-        .step-card:nth-child(5n+3) .step-num-badge { background-color: #25D366; }
-        .step-card:nth-child(5n+4) .step-num-badge { background-color: #9C27B0; }
-        .step-card:nth-child(5n+5) .step-num-badge { background-color: #FF9800; }
-        
-        .step-content h3 { margin: 0 0 5px 0; font-size: 18px; color: var(--dark-purple); font-weight: 700; }
-        .step-content p { margin: 0; font-size: 15px; color: #555; line-height: 1.5; }
-        .step-sub-list { margin: 5px 0 0 0; padding-left: 20px; font-size: 14px; color: #666; }
-        .step-sub-list li { margin-bottom: 3px; }
+
+        .step-card:nth-child(5n+1) .step-num-badge {
+            background-color: #0668E1;
+        }
+
+        .step-card:nth-child(5n+2) .step-num-badge {
+            background-color: #EF1C25;
+        }
+
+        .step-card:nth-child(5n+3) .step-num-badge {
+            background-color: #25D366;
+        }
+
+        .step-card:nth-child(5n+4) .step-num-badge {
+            background-color: #9C27B0;
+        }
+
+        .step-card:nth-child(5n+5) .step-num-badge {
+            background-color: #FF9800;
+        }
+
+        .step-content h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: var(--dark-purple);
+            font-weight: 700;
+        }
+
+        .step-content p {
+            margin: 0;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .step-sub-list {
+            margin: 5px 0 0 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .step-sub-list li {
+            margin-bottom: 3px;
+        }
 
         /* --- Testimonials --- */
         .testimonials-section {
@@ -288,6 +546,7 @@
             background: #fff;
             text-align: left;
         }
+
         .featured-testimonial-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -295,19 +554,21 @@
             margin-bottom: 60px;
             align-items: center;
         }
-        
+
         /* Fixed: Replaced inline styles on wrapper */
         .testimonial-video-wrapper {
             width: 100%;
             max-width: 600px;
             height: auto;
-            aspect-ratio: 16/9; /* Ensures correct box size before video loads */
+            aspect-ratio: 16/9;
+            /* Ensures correct box size before video loads */
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             background: #000;
         }
+
         .testimonial-video-wrapper video {
             width: 100%;
             height: 100%;
@@ -324,20 +585,23 @@
             border-radius: 12px;
             overflow: hidden;
             aspect-ratio: 9/16;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
+
         .testimonial-video-wrapper-vertical iframe {
             width: 100%;
             height: 100%;
             display: block;
             border: 0;
         }
+
         /* Fallback for older browsers */
         @supports not (aspect-ratio: 9/16) {
             .testimonial-video-wrapper-vertical {
                 height: 0;
                 padding-bottom: 177.77%;
             }
+
             .testimonial-video-wrapper-vertical iframe {
                 position: absolute;
                 top: 0;
@@ -345,12 +609,33 @@
             }
         }
 
-        .testimonial-content h3 { font-size: 22px; margin: 0 0 5px 0; color: #000; }
-        .testimonial-content .role { font-size: 14px; color: #666; font-weight: 600; margin-bottom: 10px; display: block; }
-        .testimonial-content .quote-text {
-            font-size: 16px; line-height: 1.6; color: #555; font-style: italic; margin-bottom: 15px;
+        .testimonial-content h3 {
+            font-size: 22px;
+            margin: 0 0 5px 0;
+            color: #000;
         }
-        .stars { color: #FF9900; font-size: 18px; margin-bottom: 5px; }
+
+        .testimonial-content .role {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .testimonial-content .quote-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            color: #FF9900;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
 
         .stats-reviews-grid {
             display: grid;
@@ -359,10 +644,28 @@
             border-top: 1px solid #eee;
             padding-top: 40px;
         }
-        .section-cta-container { text-align: center; margin-top: 50px; }
-        .stat-card { text-align: center; }
-        .stat-big { font-size: 32px; font-weight: 800; color: var(--dark-purple); display: block; margin-bottom: 5px; }
-        .stat-label { font-size: 14px; color: #666; }
+
+        .section-cta-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-big {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark-purple);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
 
         /* --- FAQ --- */
         .faq-section {
@@ -373,36 +676,83 @@
             gap: 50px;
             align-items: start;
         }
-        .faq-intro h4 { color: var(--teal-accent); font-weight: 700; margin-bottom: 10px; }
-        .faq-intro h2 {
-            color: var(--dark-purple); font-size: 36px; font-weight: 800;
-            line-height: 1.2; margin-bottom: 20px;
-            position: relative; display: inline-block;
-        }
-        .faq-intro p { font-size: 18px; color: #666; line-height: 1.6; }
 
-        .faq-list { display: flex; flex-direction: column; gap: 15px; }
-        .faq-item { border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        .faq-header {
-            display: flex; justify-content: space-between; align-items: center;
-            cursor: pointer; padding: 15px 0;
-            font-size: 16px; font-weight: 600; color: #333;
+        .faq-intro h4 {
+            color: var(--teal-accent);
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        .faq-header i { font-size: 14px; color: #666; transition: transform 0.3s; }
+
+        .faq-intro h2 {
+            color: var(--dark-purple);
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .faq-intro p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .faq-header i {
+            font-size: 14px;
+            color: #666;
+            transition: transform 0.3s;
+        }
+
         .faq-content {
             display: none;
             padding-bottom: 15px;
-            font-size: 15px; color: #666; line-height: 1.6;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
         }
+
         .faq-item.active {
             background-color: var(--card-light-green);
             border-radius: 10px;
             border-bottom: none;
             padding: 20px;
         }
-        .faq-item.active .faq-header { padding-top: 0; }
-        .faq-item.active .faq-header i { transform: rotate(180deg); }
-        .faq-item.active .faq-content { display: block; }
+
+        .faq-item.active .faq-header {
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-header i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-content {
+            display: block;
+        }
 
         /* --- Final CTA --- */
         .final-cta-section {
@@ -410,51 +760,133 @@
             padding: 80px 20px;
             text-align: center;
         }
-        .final-cta-section h4 { color: var(--teal-accent); font-weight: 700; margin-bottom: 10px; }
+
+        .final-cta-section h4 {
+            color: var(--teal-accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
         .final-cta-section h2 {
-            color: var(--dark-purple); font-size: 36px; font-weight: 800;
+            color: var(--dark-purple);
+            font-size: 36px;
+            font-weight: 800;
             margin-bottom: 20px;
         }
-        .final-cta-section p { font-size: 18px; color: #666; margin-bottom: 40px; }
+
+        .final-cta-section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
 
         /* --- Responsive Styles --- */
         @media (max-width: 768px) {
-            .promo-banner { flex-direction: column; gap: 10px; text-align: center; }
-            .promo-text { font-size: 18px; }
-            .h-number { font-size: 24px; }
-            body { padding-top: 130px; }
-            .hero-headline { font-size: 28px; }
-            .feature-grid { grid-template-columns: 1fr; }
-            .replaces-banner { flex-direction: column; gap: 10px; }
-            .big-red-cta { font-size: 18px; padding: 15px 30px; width: 90%; justify-content: center; }
-            .b-time-block { width: 60px; height: 60px; }
-            .b-number { font-size: 24px; }
-            
+            .promo-banner {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .promo-text {
+                font-size: 18px;
+            }
+
+            .h-number {
+                font-size: 24px;
+            }
+
+            body {
+                padding-top: 130px;
+            }
+
+            .hero-headline {
+                font-size: 28px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .replaces-banner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .big-red-cta {
+                font-size: 18px;
+                padding: 15px 30px;
+                width: 90%;
+                justify-content: center;
+            }
+
+            .b-time-block {
+                width: 60px;
+                height: 60px;
+            }
+
+            .b-number {
+                font-size: 24px;
+            }
+
             /* Responsive Grid Fixes */
-            .bottom-row-grid { grid-template-columns: 1fr; }
-            
+            .bottom-row-grid {
+                grid-template-columns: 1fr;
+            }
+
             /* Testimonials Responsive */
-            .featured-testimonial-row { grid-template-columns: 1fr; gap: 20px; }
-            .featured-testimonial-row:nth-child(2) { display: flex; flex-direction: column-reverse; } 
-            
-            .stats-reviews-grid { grid-template-columns: 1fr; gap: 30px; }
-            
+            .featured-testimonial-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .featured-testimonial-row:nth-child(2) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .stats-reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
             /* FAQ Responsive */
-            .faq-section { grid-template-columns: 1fr; gap: 30px; }
-            .faq-intro { text-align: center; }
-            
+            .faq-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .faq-intro {
+                text-align: center;
+            }
+
             /* Steps Responsive */
-            .steps-grid { grid-template-columns: 1fr; gap: 15px; }
-            
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
             /* Mobile Video Adjustments */
-            .hero-section { margin-bottom: 10px; }
-            .video-section-bg { padding-top: 0; }
-            .video-mockup-container { margin-top: -10px; margin-bottom: 30px; }
-            
-            .testimonial-video-wrapper { margin: 0 auto; }
+            .hero-section {
+                margin-bottom: 10px;
+            }
+
+            .video-section-bg {
+                padding-top: 0;
+            }
+
+            .video-mockup-container {
+                margin-top: -10px;
+                margin-bottom: 30px;
+            }
+
+            .testimonial-video-wrapper {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header class="promo-banner" id="promoHeader">
@@ -463,34 +895,41 @@
             <span>Influencers Are Overpriced. Our Creators Aren't.</span>
         </div>
         <div class="header-countdown">
-            <div class="h-time-block"> <span class="h-number" id="h-days">6</span> <span class="h-label">Days</span> </div>
-            <div class="h-time-block"> <span class="h-number" id="h-hours">05</span> <span class="h-label">Hours</span> </div>
-            <div class="h-time-block"> <span class="h-number" id="h-minutes">25</span> <span class="h-label">Minutes</span> </div>
-            <div class="h-time-block"> <span class="h-number" id="h-seconds">52</span> <span class="h-label">Seconds</span> </div>
+            <div class="h-time-block"> <span class="h-number" id="h-days">6</span> <span class="h-label">Days</span>
+            </div>
+            <div class="h-time-block"> <span class="h-number" id="h-hours">05</span> <span class="h-label">Hours</span>
+            </div>
+            <div class="h-time-block"> <span class="h-number" id="h-minutes">25</span> <span
+                    class="h-label">Minutes</span> </div>
+            <div class="h-time-block"> <span class="h-number" id="h-seconds">52</span> <span
+                    class="h-label">Seconds</span> </div>
         </div>
     </header>
 
     <section class="hero-section container-wrapper">
         <div class="brand-logos">
             <div class="logo-text-wc">
-                <img src="clippapay-logo.png" alt="ClippaPay" style="height:40px;" loading="eager"> 
-            </div> 
+                <img src="clippapay-logo.png" alt="ClippaPay" style="height:40px;" loading="eager">
+            </div>
         </div>
 
         <div class="location-tag">Most Affordable UGC Platform in Nigeria</div>
         <div class="badges-container">
-            <div class="badge"><i class="fa-solid fa-check-circle" style="color:#25D366"></i> Guaranteed Real Views</div>
+            <div class="badge"><i class="fa-solid fa-check-circle" style="color:#25D366"></i> Guaranteed Real Views
+            </div>
             <div class="badge"><i class="fa-solid fa-user-check" style="color:#0668E1"></i> Verified PRO Creators</div>
         </div>
 
-        <h1 class="hero-headline">₦250,000 for one influencer<br>Or ₦35,000 for UGC that converts??<br>Nigerian brands are choosing wisely</h1>
-        
+        <h1 class="hero-headline">₦250,000 for one influencer<br>Or ₦35,000 for UGC that converts??<br>Nigerian brands
+            are choosing wisely</h1>
+
         <p class="hero-subtext hero-subtext-styled">
-          Real creators. Real content. Real conversions. UGC packages from ₦35,000.
+            Real creators. Real content. Real conversions. UGC packages from ₦35,000.
         </p>
-        
+
         <div class="section-cta-container">
-            <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+            <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                class="big-red-cta">
                 <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
             </a>
         </div>
@@ -499,7 +938,7 @@
 
     <section class="video-section-bg">
         <div class="container-wrapper">
-            
+
             <div class="video-mockup-container">
                 <div class="video-side-arrow">
                     <i class="fa-solid fa-arrow-left-long"></i>
@@ -509,12 +948,13 @@
                     <source src="sales.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-            </div> 
-            
+            </div>
+
 
             <div class="replaces-banner">
                 <div style="display:flex; align-items:center; gap:10px;">
-                    <i class="fa-solid fa-ban" style="color:red; font-size: 24px;"></i> <span>Replaces</span> <i class="fa-solid fa-arrow-right-long"></i>
+                    <i class="fa-solid fa-ban" style="color:red; font-size: 24px;"></i> <span>Replaces</span> <i
+                        class="fa-solid fa-arrow-right-long"></i>
                 </div>
                 <div class="replaces-logos">
                     <span class="comp-logo">Expensive Influencers</span>
@@ -529,28 +969,38 @@
             </div>
 
             <div class="feature-grid">
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Auto-matched with creators that fit your brand</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Auto-matched with creators that fit your
+                    brand</div>
                 <div class="feature-item"><i class="fa-solid fa-check"></i> Professional content delivered fast</div>
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Revisions included until you're satisfied</div>
-                <div class="feature-item"><i class="fa-solid fa-check"></i> No influencer fees. No contracts. No stress.</div>
-                <div class="feature-item"><i class="fa-solid fa-check"></i> Launch your first UGC campaign in minutes</div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Revisions included until you're satisfied
+                </div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> No influencer fees. No contracts. No stress.
+                </div>
+                <div class="feature-item"><i class="fa-solid fa-check"></i> Launch your first UGC campaign in minutes
+                </div>
             </div>
 
             <h3 style="margin-bottom:5px;">Launch Your UGC Campaign from ₦35,000</h3>
             <p class="offer-expiry-text">⚠️ Offer expires soon</p>
-            <p style="font-size: 14px; color: #666; margin-top: -5px;">Get a PRO Creator making content that converts, Standard ₦35,000 or Premium ₦60,000. No influencer fees. No hidden charges</p>
+            <p style="font-size: 14px; color: #666; margin-top: -5px;">Get a PRO Creator making content that converts,
+                Standard ₦35,000 or Premium ₦60,000. No influencer fees. No hidden charges</p>
 
             <div class="body-countdown">
-                <div class="b-time-block"> <span class="b-number" id="b-days">6</span> <span class="b-label">Days</span> </div>
-                <div class="b-time-block"> <span class="b-number" id="b-hours">05</span> <span class="b-label">Hrs</span> </div>
-                <div class="b-time-block"> <span class="b-number" id="b-minutes">25</span> <span class="b-label">Min</span> </div>
-                <div class="b-time-block"> <span class="b-number" id="b-seconds">52</span> <span class="b-label">Sec</span> </div>
+                <div class="b-time-block"> <span class="b-number" id="b-days">6</span> <span class="b-label">Days</span>
+                </div>
+                <div class="b-time-block"> <span class="b-number" id="b-hours">05</span> <span
+                        class="b-label">Hrs</span> </div>
+                <div class="b-time-block"> <span class="b-number" id="b-minutes">25</span> <span
+                        class="b-label">Min</span> </div>
+                <div class="b-time-block"> <span class="b-number" id="b-seconds">52</span> <span
+                        class="b-label">Sec</span> </div>
             </div>
 
-            <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+            <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                class="big-red-cta">
                 <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
             </a>
-            
+
             <div style="margin-bottom: 20px;">
                 <a href="#" style="color:#666; text-decoration: underline; font-weight:600;">See How It Works →</a>
             </div>
@@ -560,9 +1010,10 @@
                 <div class="trust-item"><i class="fa-solid fa-circle-check"></i> 200+ Advertisers</div>
                 <div class="trust-item"><i class="fa-solid fa-circle-check"></i> Growing Fast</div>
             </div>
-            
+
             <div class="section-cta-container">
-                <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+                <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                    class="big-red-cta">
                     <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
                 </a>
             </div>
@@ -601,7 +1052,7 @@
     <section class="steps-section-wrapper">
         <div class="container-wrapper">
             <h2 class="showcase-title">How To Get Started</h2>
-            
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-num-badge">1</div>
@@ -611,7 +1062,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="step-card">
                     <div class="step-num-badge">2</div>
                     <div class="step-content">
@@ -638,7 +1089,8 @@
             </div>
 
             <div class="section-cta-container">
-                <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+                <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                    class="big-red-cta">
                     <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
                 </a>
             </div>
@@ -650,10 +1102,12 @@
             <h2 style="text-align: center; margin-bottom: 50px; font-size: 32px; color: var(--dark-purple);">
                 What Nigerian Business Owners Are Saying
             </h2>
-            
+
             <div class="featured-testimonial-row">
                 <div class="testimonial-video-wrapper-vertical">
-                    <iframe src="https://www.youtube.com/embed/kokJBFIj7pg" title="ClippaPay Testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/kokJBFIj7pg" title="ClippaPay Testimonial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
 
                 <div class="testimonial-content">
@@ -666,7 +1120,9 @@
                     </div>
 
                     <p class="quote-text">
-                        "ClippaPay really transformed the visibility of my kiddies wear brand. The creators made authentic, playful content that connected with parents, and I started receiving more inquiries and orders than I ever got from influencers. It’s been a game changer for my business."
+                        "ClippaPay really transformed the visibility of my kiddies wear brand. The creators made
+                        authentic, playful content that connected with parents, and I started receiving more inquiries
+                        and orders than I ever got from influencers. It’s been a game changer for my business."
                     </p>
 
                     <h3>Fashion Brand Owner</h3>
@@ -679,20 +1135,26 @@
                 <div class="testimonial-content">
                     <i class="fa-solid fa-quote-left" style="color:#2c9c8e; font-size: 30px; margin-bottom:10px;"></i>
                     <p class="quote-text">
-                        "I invested just ₦50,000 on ClippaPay and got more visibility than any influencer has ever given me. The UGC videos they created for my listings performed better than my paid ads, and I even started getting real inquiries."
+                        "I invested just ₦50,000 on ClippaPay and got more visibility than any influencer has ever given
+                        me. The UGC videos they created for my listings performed better than my paid ads, and I even
+                        started getting real inquiries."
                     </p>
                     <h3>Real Estate Agent</h3>
                     <span class="role">Lagos, Nigeria</span>
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                 </div>
-                
+
                 <div class="testimonial-video-wrapper-vertical">
-                    <iframe src="https://www.youtube.com/embed/kJ74bl0fc4g" title="ClippaPay Testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/kJ74bl0fc4g" title="ClippaPay Testimonial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="stats-reviews-grid">
-                
+
                 <div class="stat-card">
                     <span class="stat-big">₦35,000</span>
                     <span class="stat-label">Starting Budget</span>
@@ -711,7 +1173,8 @@
             </div>
 
             <div class="section-cta-container">
-                <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+                <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                    class="big-red-cta">
                     <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
                 </a>
             </div>
@@ -731,7 +1194,8 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-content">
-                    You can get started for as low as ₦35,000. This gets you a PRO UGC creator making content built to convert your audience into real customers.
+                    You can get started for as low as ₦35,000. This gets you a PRO UGC creator making content built to
+                    convert your audience into real customers.
                 </div>
             </div>
 
@@ -741,7 +1205,8 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-content">
-                    Not always. If you have a digital product or service, creators can work with that. for physical products, you will arrange delivery with the matched creators.
+                    Not always. If you have a digital product or service, creators can work with that. for physical
+                    products, you will arrange delivery with the matched creators.
                 </div>
             </div>
             <div class="faq-item">
@@ -750,13 +1215,15 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-content">
-                    You can launch a campaign in about 2 minutes. Once launched, creators usually pick up the gig immediately.
+                    You can launch a campaign in about 2 minutes. Once launched, creators usually pick up the gig
+                    immediately.
                 </div>
             </div>
         </div>
-        
+
         <div class="section-cta-container" style="grid-column: 1 / -1;">
-            <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" class="big-red-cta">
+            <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                class="big-red-cta">
                 <i class="fa-solid fa-arrow-right"></i>PUSH MY BRAND
             </a>
         </div>
@@ -768,7 +1235,8 @@
             <h2>Your Competitors Are Already Using ClippaPay</h2>
             <p>Don't get left behind. Start your first campaign today.</p>
             <button class="big-red-cta">
-                <a href="https://wa.me/2348053353964?text=I'm%20ready%20to%20push%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F" style="text-decoration: none; color: white;"><i class="fa-solid fa-rocket"></i>PUSH MY BRAND</a>
+                <a href="https://wa.me/2348053353964?text=I%20need%20UGCs%20for%20my%20brand%20on%20ClippaPay.%20How%20do%20I%20get%20started%3F"
+                    style="text-decoration: none; color: white;"><i class="fa-solid fa-rocket"></i>PUSH MY BRAND</a>
             </button>
         </div>
     </section>
@@ -781,7 +1249,7 @@
             const now = new Date().getTime();
             const t = deadline - now;
 
-            if (t < 0) return; 
+            if (t < 0) return;
 
             const days = Math.floor(t / (1000 * 60 * 60 * 24));
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -812,7 +1280,7 @@
             const header = item.querySelector('.faq-header');
             header.addEventListener('click', () => {
                 faqItems.forEach(i => {
-                    if(i !== item) i.classList.remove('active');
+                    if (i !== item) i.classList.remove('active');
                 });
                 item.classList.toggle('active');
             });
@@ -822,7 +1290,7 @@
         let lastScroll = 0;
         let ticking = false; // Performance optimization
         const promoHeader = document.getElementById('promoHeader');
-        
+
         window.addEventListener('scroll', () => {
             if (!ticking) {
                 window.requestAnimationFrame(() => {
@@ -841,4 +1309,5 @@
 
     </script>
 </body>
+
 </html>
